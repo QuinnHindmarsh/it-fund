@@ -1,5 +1,4 @@
 {
-    color: #ececec;
 }
 
 
@@ -17,9 +16,23 @@ header h1{
     padding: 1em;
 }
 
-header button {}
+header button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 0.5em;
+    border-radius: 20px; /* Curved corners */
+    cursor: pointer;
+}
 
-nav{}
+
+nav {
+    background-color: #000000;
+    border-radius: 20px; /* Curved corners */
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
 
 nav ul{}
 
@@ -34,7 +47,7 @@ article{
 }
 
 article h2 {
-    padding-left: 2em;
+    padding-left: 2em; /* main headings are closer to the left, paragraphs arnt as far */
 }
 
 article h3 {
