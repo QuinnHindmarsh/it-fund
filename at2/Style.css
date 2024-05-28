@@ -1,16 +1,65 @@
 {
+    color: #ececec;
+}
+
+
+body{
+    background-color: #424549;
+}
+
+header{
+    background-color:#000;
+}
+
+header h1{
+    text-align: center;
+    color: #ececec;
+    padding: 1em;
+}
+
+header button {}
+
+nav{}
+
+nav ul{}
+
+nav form {}
+
+main {
+    color: #ececec;
+}
+
+article{
 
 }
-head{
 
+article h2 {
+    padding-left: 2em;
 }
+
+article h3 {
+    padding-left: 5em;
+}
+
+article h4 {
+    padding-left: 7em;
+}
+
+article p {
+    padding-left:9em;
+    padding-top: 0.5em;
+}
+
+p{}
 
 
 footer {
-    background-color: #4e4d4d;
-    color: #fff;
+    margin-top: 4em;
+    background-color: #000000;
+    color: #ececec;
     text-align: center;
     padding: 6px 0;
+    margin-top: 4em;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
