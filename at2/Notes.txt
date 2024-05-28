@@ -1,0 +1,7 @@
+first page
+- about my first year at uni
+    - add images
+    - add nav links
+
+second page
+- about learning in first year
