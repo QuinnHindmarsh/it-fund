@@ -14,6 +14,28 @@
 
 </head>
 
+<script>
+
+ function ChangeEmblem() /* changes the emblem to a new one*/
+ {
+  var img = document.getElementById("emblem");
+  img.src="images/UNISA_Emblem2.png";
+ }
+
+ /* changes the photo of the campus to a new one,
+  I probably should have made the change emblem one more reussable and used that for both.
+  but this was quicker
+  */
+
+
+ function ChangeCampusPic()
+ {
+  var img = document.getElementById("Campus");
+  img.src="images/MawsonLakesImg2.jpg";
+ }
+
+
+</script>
 <body>
 
 
@@ -27,6 +49,10 @@
 </nav>
 
 <main>
+ <img id='emblem'  src="images/UNISA_Emblem.png"   alt="UNISA emblem">
+ <img id ='Campus' src="images/MawsonLakesImg.jpg" alt="Photo of UNISA mawson lakes campus">
+ <button id="EmblemChange" onclick="ChangeEmblem();">Change emblem</button>
+ <button id="CampusChange" onclick="ChangeCampusPic();">Change campus pic</button>
 
  <article>
   <h2>Why i chose my course</h2>

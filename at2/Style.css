@@ -3,7 +3,7 @@
 
 
 body{
-    background-color: #424549;
+    background-color: #474549;
 }
 
 header{
@@ -18,8 +18,8 @@ header h1{
 
 header button {
     background-color: #fff;
-    color: #4CAF50;
-    border: 2px solid #4CAF50;
+    color: #088ebf;
+    border: 2px solid #088ebf;
     padding: 0.5em;
     border-radius: 20px; /* Curved corners */
     cursor: pointer;
@@ -32,6 +32,7 @@ nav {
     padding: 10px;
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 nav ul{}
@@ -43,7 +44,23 @@ main {
 }
 
 article{
+    background-color: #424549;
+    margin-bottom: 75px;
+    padding: 1em;
+    border-radius: 20px; /* Curved corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+
+
+header button:hover {
+    background-color: #088ebf;
+    color: #fff;
+}
+
+body button:hover {
+    background-color: #088ebf;
+    color: #000000;
 }
 
 article h2 {
