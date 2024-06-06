@@ -1,5 +1,5 @@
 
-function ChangeForward() /* changes the emblem to a new one*/
+function ChangeForward() /*changes the image and text to the emblem*/
 {
     var img = document.getElementById("Img");
     var txt = document.getElementById('ImgText')
@@ -10,7 +10,7 @@ function ChangeForward() /* changes the emblem to a new one*/
 
 
 
-function ChangeBackward()
+function ChangeBackward()/* changes the image and the text to a cmapus photo*/
 {
     var img = document.getElementById("Img");
     var txt = document.getElementById('ImgText')
@@ -19,7 +19,8 @@ function ChangeBackward()
     txt.innerText='attributions for UNISA Campus';
 }
 
-function ChangeTheme() {
+function ChangeTheme()/*toggles between themes*/
+{
     /*const theme_toggle = document.getElementById('theme_toggle');*/
     var data_theme = document.documentElement.getAttribute("data-theme");
     document.documentElement.setAttribute("data-theme", data_theme === "light" ? "dark" : "light")

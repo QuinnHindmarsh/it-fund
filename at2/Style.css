@@ -1,29 +1,32 @@
-
+/* the origonal theme - light mode */
 html[data-theme='light'] {
-    --text_color: #ffffff
+    --text_color: #8f8b8b
 }
 
+/* dark mode theme */
 html[data-theme='dark'] {
-    --text_color: #000000
+    --text_color: #3a3838
 }
 
 
 
-
+/* styling for whole body */
 body{
     background-color: var(--text_color);
 }
 
+/* styling for body as a whole */
 header{
     background-color:#000;
 }
 
+/* styling for h1 in header*/
 header h1{
     text-align: center;
     color: #ececec;
     padding: 1em;
 }
-
+/* styling for button in headers */
 header button {
     background-color: #fff;
     color: #000000;
@@ -33,7 +36,7 @@ header button {
     cursor: pointer;
 }
 
-
+/* styling for nav */
 nav {
     background-color: #000000;
     border-radius: 20px; /* Curved corners */
@@ -43,14 +46,18 @@ nav {
     margin-bottom: 30px;
 }
 
+/* will add styling shortly
 nav ul{}
 
 nav form {}
+*/
 
+/*styling for main tag */
 main {
     color: #ececec;
 }
 
+/* styling for all articles */
 article{
     background-color: #424549;
     margin-bottom: 75px;
@@ -59,8 +66,17 @@ article{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* styling for buttons inside body */
+body button{
+    background-color: #fff;
+    color: #000000;
+    border: 2px solid #088ebf;
+    padding: 0.5em;
+    border-radius: 20px; /* Curved corners */
+    cursor: pointer;
+}
 
-
+/*
 header button:hover {
     background-color: #088ebf;
     color: #fff;
@@ -70,19 +86,27 @@ body button:hover {
     background-color: #088ebf;
     color: #000000;
 }
+*/
 
+/*styling for when you hover over button */
+button:hover {
+    background-color: #088ebf;
+    color: #000000;
+    border: 2px solid #088ebf;
+}
+/* styling for h2 inside article*/
 article h2 {
     padding-left: 2em; /* main headings are closer to the left, paragraphs arnt as far */
 }
-
+/* styling for h3 inside article*/
 article h3 {
     padding-left: 5em;
 }
-
+/* styling for h4 inside article*/
 article h4 {
     padding-left: 7em;
 }
-
+/* styling for p inside article*/
 article p {
     padding-left:9em;
     padding-top: 0.5em;
@@ -90,7 +114,7 @@ article p {
 
 p{}
 
-
+/* styling for footer*/
 footer {
     margin-top: 4em;
     background-color: #000000;
