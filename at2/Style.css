@@ -3,6 +3,7 @@ html[data-theme='light'] {
 
     /* text colours */
     --text_color: #32292F;
+    --heading_text_color: #32292F;
     --article_heading_color: #B400E0;
 
     /* background colors */
@@ -15,9 +16,6 @@ html[data-theme='light'] {
     --button_hover_background: #088ebf;
     --button_hover_border: #088ebf;
     --buttton_border: #088ebf;
-
-
-
 
 
 
@@ -27,19 +25,21 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
 
     /* text colours */
-    --text_color: #32292F;
+    --text_color: #E9CCC3;
+    --heading_text_color: #F3E6E2;
     --article_heading_color: #B400E0;
 
     /* background colors */
-    --body_background_color: #C3C1C1;
-    --header_background_color: #4282B3;
-    --background_color: #A5A1A1;
+    --body_background_color: #2A2828;
+    --header_background_color: #8300A3;
+    --background_color: #3E3C3C;
 
     /* Button customisations */
-    --button_background_color: #fff;
-    --button_hover_background: #088ebf;
-    --button_hover_border: #088ebf;
-    --buttton_border: #088ebf;
+    --button_background_color: #4B5267;
+    --button_hover_background: #62007A;
+    --button_hover_border: #62007A;
+    --buttton_border: #62007A;
+
 }
 
 
@@ -52,12 +52,14 @@ body{
 /* styling for body as a whole */
 header{
     background-color: var(--header_background_color);
+    border-radius: 20px
 }
 
 /* styling for h1 in header*/
 header h1{
     text-align: center;
-    color: var(--text_color);
+    font-size: 200%;
+    color: var(--heading_text_color);
     padding: 1em;
 }
 
@@ -81,11 +83,17 @@ nav {
     margin-bottom: 30px;
 }
 
-/* will add styling shortly
-nav ul{}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+}
 
-nav form {}
-*/
+.ImgTxt {
+    text-align: center;
+}
+
 
 /*styling for main tag */
 main {
@@ -109,6 +117,7 @@ body button{
     padding: 0.5em;
     border-radius: 20px; /* Curved corners */
     cursor: pointer;
+    margin-top: 0.5em;
 }
 
 
@@ -153,5 +162,15 @@ footer {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px
 
 }
+
+/*
+
+
+nav ul{}
+
+nav form {}
+
+ */

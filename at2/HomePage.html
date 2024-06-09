@@ -3,68 +3,98 @@
 <html coupert-item="9AF8D9A4E502F3784AD24272D81F0381"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html data-theme="light"></html><!-- theme is light mode by defult  -->
 
- <title>My first year</title> <!-- sets the title of the webpage to My first year   -->
- <link rel="stylesheet" href="Style.css">
- <script src='Script.js'></script>
-<head>
- <!--<meta http-equiv="refresh" content="3" >  used for development purposes - page will refersh every 3 seconds -->
- <header>
-  <h1>My first year at UNISA</h1>
+<title>My first year</title> <!-- sets the title of the webpage to My first year   -->
 
- </header>
+
+<link rel="stylesheet" href="Style.css">
+<script src='Script.js'></script>
+
+
+
+<head>
+
+  <!--<meta http-equiv="refresh" content="3" >  used for development purposes - page will refersh every 3 seconds -->
+  <header>
+     <h1 id="HeadText" >My first year at UNISA</h1>
+
+     <button id='theme_toggle' onclick="ChangeTheme()">Toggle Theme</button> <!-- allows you to toggle between light and dark mode   -->
+
+  </header>
+
+
 
 </head>
 
 
 <body>
-<button id='theme_toggle' onclick="ChangeTheme()">Toggle Theme</button> <!-- allows you to toggle between light and dark mode   -->
-<div style="text-align:center;padding:1em 0;"> <h4><a style="text-decoration:none;><span style="color:red;"></span></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Australia%2FAdelaide" width="100%" height="90" frameborder="0" seamless></iframe> </div>
 
-<nav>
- <ul>
-  <li><a href="SecondPage.html">What ive learn</a></li>
- </ul>
- <!--text box to enter usernames   -->
- <form><input type="text" name="user_name" placeholder="Enter your name!"> <button type="submit">Apply!</button></form>
-</nav>
-
-<main>
- <img id ='Img' src="images/MawsonLakesImg.jpg" alt="Photo of UNISA mawson lakes campus">
- <button id="ChangeFor" onclick="ChangeForward();">New Image</button><!--brings you back to the origonal image   -->
- <button id="ChangeBack" onclick="ChangeBackward();">Origonal image</button><!--new image comes up   -->
-
- <p id="ImgText">text1</p>
+  <!-- clock  -->
+  <div style="text-align:center;padding:1em 0;"> <h4><a style="text-decoration:none;><span style="color:red;"></span></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Australia%2FAdelaide" width="100%" height="90" frameborder="0" seamless></iframe> </div>
 
 
+  <nav>
 
- <!-- first paragraph  -->
- <article>
-  <h2>Why i chose my course</h2>
-  <h3>Why i chose IT</h3>
-  <p>I have been interested in IT for many years and i belived it would be a good mostly future proof industry to work in. I completed year 12 with 3 of my 5 subject being in IT, so study IT in uni was the obvious choice. </p>
-  <h3>Why i chose software engineering</h3>
-  <p> I chose software engineering over other IT degrees as i am primaraly interested in programing, and i do not have as much of an interest in other areas in IT such as cyber security and networking.</p>
+  <ul>
 
- </article>
- <!-- 2nd paragraph   -->
- <article> <h2>Why i chose UNISA</h2>
+   <li><a href="SecondPage.html">What ive learn</a></li>
 
-  <h3>Why i choose to move to Adelaide</h3>
-  <p>Before i moved to Adelaide i lived in and around Newcastle my whole life, which is where i completed Highschool. At the end of year 12 i needed to either get my own place in Newcastle  or move to a new area, so i decided to move for uni.</p>
+  </ul>
+  <!--text box to enter usernames   -->
+  <form><input type="text" name="user_name" placeholder="Enter your name!"> <button onclick="UserName()"  type="submit">Apply!</button></form>
 
-  <p>There where multiple locations i was considering moving to, such as melbourne, woolongong, rockhamption and adelaide. i eventually decided on Adealide due  to a combination of factors.</p>
-
-  <h3>Why i chose UNISA over other universities in Adelaide </h3>
-  <p>From the research i did UNISA seemed to have a higher quality of education, particulally in IT then the other uni's in adelaide so i chose to study here. </p>
-
- </article>
+  </nav>
 
 
- <footer>   <p>©Copyright 2024 by <inset your="" name=""> All rights reversed.</inset></p>    </footer>
+
+  <main>
+
+
+   <!-- image + related stuff  -->
+    <img id ='Img' src="images/UNISACampus2.jpg" alt="Photo of UNISA campus" class="center" style="width:200px;height:200px;"  >
+    <button id="ChangeFor" class="center"  onclick="ChangeForward();">New Image</button><!--brings you back to the origonal image   -->
+    <button id="ChangeBack" class="center" onclick="ChangeBackward();">Origonal image</button><!--new image comes up   -->
+
+    <p id="ImgText" class="ImgTxt">File:UniSA Library, Adelaide, East view 20230207.jpg - Wikimedia Commons https://shorturl.at/jka10</p>
 
 
 
 
-</main>
+    <!-- text  -->
+
+    <!-- first paragraph  -->
+    <article>
+       <h2>Why i chose my course</h2>
+       <h3>Why i chose IT</h3>
+       <p>I have been interested in IT for many years and i belived it would be a good mostly future proof industry to work in. I completed year 12 with 3 of my 5 subject being in IT, so study IT in uni was the obvious choice. </p>
+       <h3>Why i chose software engineering</h3>
+       <p> I chose software engineering over other IT degrees as i am primaraly interested in programing, and i do not have as much of an interest in other areas in IT such as cyber security and networking.</p>
+    </article>
+
+
+    <!-- 2nd paragraph   -->
+    <article> <h2>Why i chose UNISA</h2>
+
+       <h3>Why i choose to move to Adelaide</h3>
+       <p>Before i moved to Adelaide i lived in and around Newcastle my whole life, which is where i completed Highschool. At the end of year 12 i needed to either get my own place in Newcastle  or move to a new area, so i decided to move for uni.</p>
+
+       <p>There where multiple locations i was considering moving to, such as melbourne, woolongong, rockhamption and adelaide. i eventually decided on Adealide due  to a combination of factors.</p>
+
+       <h3>Why i chose UNISA over other universities in Adelaide </h3>
+       <p>From the research i did UNISA seemed to have a higher quality of education, particulally in IT then the other uni's in adelaide so i chose to study here. </p>
+
+    </article>
+
+
+    <footer>
+       <p>©Copyright 2024 by <inset your="" name=""> All rights reversed.</inset></p>
+    </footer>
+
+
+
+
+  </main>
+
+
 </body>
+
 </html>
