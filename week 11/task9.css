@@ -15,7 +15,9 @@
     --c-cyan: 42, 161, 152;
     --c-green: 133, 153, 0;
 }
-
+header,main,nav{
+width: 800px;
+}
 body{
     background-color: rgb(var(--c-background-color));
 }
@@ -42,7 +44,9 @@ li{
     color: rgb(var(--c-magenta));
 }
 
-
+article h1,h2,h3,h4,h5,h6{
+    padding-top: 50px;
+}
 a:hover{
     color: rgb(var(--c-orange));
 }
@@ -71,4 +75,9 @@ aside{
 aside{
     a{color: red}
     a:hover{color: blue}
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
 }
