@@ -33,6 +33,7 @@ function ChangeTheme()/*toggles between themes*/
 
 
 function UserName(){
+
     const txt = document.getElementById('HeadText');
 
 
@@ -40,21 +41,46 @@ function UserName(){
     const urlParams = new URLSearchParams(queryString);
     const userName = urlParams.get('user_name');
 
-    if (userName == null || userName == ""){
-        txt.innerText='My first year at UNISA';
+    local_user_name = localStorage.getItem('LocalUserName');
+
+
+    console.log('local user name ' + local_user_name);
+    console.log('user name ' + userName)
+
+    if (userName == null || userName == "")
+    {
+
+        if (local_user_name == "null" || local_user_name == null || local_user_name == "")
+        {
+            console.log('1')
+            txt.innerText='My first year at UNISA';
+        }
+
+        else
+        {
+            console.log('2')
+            txt.innerText= "Hello, " + local_user_name;
+        }
     }
-    else {
+
+    else
+    {
+        console.log('3')
         txt.innerText= "Hello, " + userName;
+        localStorage.setItem('LocalUserName', userName);
     }
+
 
 }
 
-function OnLoad(){
-    var data_theme = document.documentElement.getAttribute("data-theme");
 
+
+function OnLoad(){
     const theme = localStorage.getItem("Theme");
 
-    console.log(theme);
+    UserName()
+
+
     document.documentElement.setAttribute("data-theme",  theme)
 
 
