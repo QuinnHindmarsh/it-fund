@@ -31,61 +31,68 @@ function ChangeTheme()/*toggles between themes*/
 
 }
 
+/*
+function MakePass(){
+    console.log('you are in the MakePass function')
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const NewPass = urlParams.get('NewPass')
 
-function UserName(){
+    localStorage.setItem('Pass',NewPass)
+}
 
-    const txt = document.getElementById('HeadText');
-
+function PassApply(){
+    console.log('you are in the PassApply function')
+    password = localStorage.getItem('Pass');
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const userName = urlParams.get('user_name');
+    const EnteredPass = urlParams.get('Pass')
 
-    local_user_name = localStorage.getItem('LocalUserName');
+    window.location  = 'ToDo.html';
 
-
-    console.log('local user name ' + local_user_name);
-    console.log('user name ' + userName)
-
-    if (userName == null || userName == "")
-    {
-
-        if (local_user_name == "null" || local_user_name == null || local_user_name == "")
-        {
-            console.log('1')
-            txt.innerText='My first year at UNISA';
-        }
-
-        else
-        {
-            console.log('2')
-            txt.innerText= "Hello, " + local_user_name;
-        }
+    if (password === EnteredPass){
+        alert('Password entered correctly')
+        window.location  = 'ToDo.html';
     }
-
-    else
-    {
-        console.log('3')
-        txt.innerText= "Hello, " + userName;
-        localStorage.setItem('LocalUserName', userName);
+    else{
+        alert('Password entered incorrectly, please try again')
     }
 
 
 }
 
+ */
 
+function PassApply() {
+    console.log('you are in the PassApply function')
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const EnteredPass = urlParams.get('Pass')
+
+    if (EnteredPass == "Password"){
+        alert("Password is entered correctly ")
+        window.location  = 'ToDo.html'; /* this line works in the test function but not in this one, something else must be wrong but i cant work it out */
+    }
+    else {
+        alert("Password is does not match, please try again. ")
+    }
+
+
+}
+
+function test(){
+    window.location  = 'ToDo.html';
+}
 
 function OnLoad(){
     const theme = localStorage.getItem("Theme");
 
-    UserName()
-
-
     document.documentElement.setAttribute("data-theme",  theme)
-
-
 
 }
 
-/*window.onload = function() {UserName()} */
 window.onload = OnLoad;
+
+/*window.onload = function() {UserName()} */
