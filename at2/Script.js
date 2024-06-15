@@ -1,3 +1,13 @@
+function GetTime(){//gets the current date and time of the users timezone and displays it
+    let date = new Date();//automaticaaly gets the date and time of the users timezone baised on IP
+    const clock = document.getElementById("clock");
+
+    console.log(date)
+    date = date.toString().split(" ")
+    clock.innerText = date[2] + "-" + date[1] + "-" + date[3] + "  " + date[4];
+
+
+}
 
 function ChangeForward() /*changes the image and text to the emblem*/
 {
@@ -64,7 +74,7 @@ function PassApply(){
 
  */
 
-function PassApply() {
+function PassApply() {//doesnt work for some reason
     console.log('you are in the PassApply function')
 
     const queryString = window.location.search;
@@ -82,15 +92,16 @@ function PassApply() {
 
 }
 
-function test(){
+function test(){//used for development purposes
     window.location  = 'ToDo.html';
 }
 
-function OnLoad(){
+function OnLoad(){//sets theme to users prefrence and calls get time
     const theme = localStorage.getItem("Theme");
 
     document.documentElement.setAttribute("data-theme",  theme)
 
+    GetTime()
 }
 
 window.onload = OnLoad;

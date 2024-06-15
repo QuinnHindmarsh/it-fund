@@ -3,12 +3,16 @@ html[data-theme='light'] {
 
     /* text colours */
     --text_color: #32292F;
+    --vis_link: #000;
     --heading_text_color: #32292F;
     --article_heading_color: #B400E0;
+
+    --span_background: #272123;
 
     /* background colors */
     --body_background_color: #C3C1C1;
     --header_background_color: #4282B3;
+
     --background_color: #A5A1A1;
 
     /* Button customisations */
@@ -26,6 +30,7 @@ html[data-theme='dark'] {
 
     /* text colours */
     --text_color: #E9CCC3;
+    --vis_link: #fff;
     --heading_text_color: #F3E6E2;
     --article_heading_color: #B400E0;
 
@@ -33,6 +38,8 @@ html[data-theme='dark'] {
     --body_background_color: #2A2828;
     --header_background_color: #8300A3;
     --background_color: #3E3C3C;
+
+    --span_background: #bf9b94;
 
     /* Button customisations */
     --button_background_color: #4B5267;
@@ -42,7 +49,9 @@ html[data-theme='dark'] {
 
 }
 
-ui il {
+
+
+ul {
     list-style: none;
 }
 
@@ -84,6 +93,7 @@ nav {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 30px;
+
 }
 
 .center {
@@ -152,7 +162,18 @@ button:hover {
     color: var(--text_color);
     border: 2px solid var(--button_hover_border);
 }
-p{}
+
+a{
+    color: var(--text_color);
+}
+
+a:visited{
+    color: var(--vis_link);
+}
+
+a:hover{
+    color: aqua;
+}
 
 /* styling for footer*/
 footer {
@@ -171,41 +192,43 @@ footer {
 
 /*for ToDo sheet */
 .container{
-    width: 100%;
-    min-height: 100vh;
     padding: 10px;
 
 }
 
-/*for ToDo sheet */
+
 .ToDo-app{
-    width: 100%;
     max-width: 540px;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
+
 .ToDo-app h2{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 10px;
 }
+
 .row{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 30px;
-    padding: 20px;
+    border-radius: 25px;
+    padding: 25px;
     margin-bottom: 25px;
 }
+
 .row input{
+    color: var(--text_color);
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
 }
+
 .row button{
     border: none;
     outline: none;
@@ -214,6 +237,7 @@ footer {
     cursor: pointer;
     border-radius: 40px;
 }
+
 .ToDo-app ul li{
     list-style: none;
     font-size: 17px;
@@ -221,44 +245,11 @@ footer {
     user-select: none;
 }
 
-/*
-
-.ToDo-app ul li span{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #fb3144;
-    line-height: 40px;
-    text-align: center;
+.Todo-app span{
     border-radius: 50%;
-
 }
 
-.ToDo-app ul li span:hover{
-
+.Todo-app span:hover{
+    background: var(--span_background);
 }
 
-
-.ToDo-app ul li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-
-}
-
-
-
-nav ul{}
-
-nav form {}
-
- */
